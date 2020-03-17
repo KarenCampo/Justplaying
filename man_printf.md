@@ -7,17 +7,17 @@
 
 ## SYNOPSIS
 
-	**#include <holberton.h>**
+	#include <holberton.h>
 
-	**int _printf**(**const char** *format, ...);
-	**int print_char**(va_list arg);
-	**int print_string**(va_list arg);
-	**int print_int**(va_list arg);
+	int _printf(const char *format, ...);
+	int print_char(va_list arg);
+	int print_string(va_list arg);
+	int print_int(va_list arg);
 
 
 ## DESCRIPTION
 
-	The function **_printf()** is a customized version of **printf()**, function that outputs according to a format. Under the control of a format string this funct	ion writes subsequent arguments (or arguments accessed via the variable-length argument facilities of stdarg(3)) are converted for output.
+	The function _printf() is a customized version of printf(), function that outputs according to a format. Under the control of a format string this funct	ion writes subsequent arguments (or arguments accessed via the variable-length argument facilities of stdarg(3)) are converted for output.
 
 ## RETURN VALUE
 
@@ -36,18 +36,18 @@ _printf("%*d", width);
 
 The character % is followed by zero or more of the following flags:
 
-####**'#'**
+#### **'#'**
 
 The value has to become an alternate  form for **o** conversions. The first output of the string character is 0 - prefixing 0 if 0 wasn't there. For **x** and **X** conversions , a nonzero result has the string **0x** (or **0X** for **X** conversions). For a **a**, **A**, **e**, **E**, **f**, **F**, **g** and **G** conversions, a decimal point will always be contained in the result.  For **g** and **G** conversions, trailing zeros are not removed from the result as they would be otherwise.
 
-####  **'0'** (number zero)
+####  **'0'** (number zero)https://github.com/KarenCampo/Justplaying.git
 
 Its value should be padded for all covesions but n, the converted value should be padded on the left with zeros instead of blanks. If precision is given with a numeric onversion (**d**, **i**, **o**, **u**, **x**, and  **X**). The flag 0 is not taken into account. For other conversions the behavior is undefined. 
 
-#### **'-'**
+#### **-**
 The converted value should be left adjusted  on the field boundary. The default is the right justification) Except for **n** conversion, the converted value is padded on the right with blanks instead of to the left with blanks or zeros. **A** - nullifies a **0** if them both are given.
 
-#### **' '' '**
+#### "
 
 A space or blank should be left before a positive number or empty string done by a signed conversion
 
@@ -108,7 +108,7 @@ To print a date and time in the form ``Sunday, July 3, 10:02'', where
 
 The **printf** family of functions do not correctly handle multibyte characters in the format argument
 
-
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ## Authors
 
 * [Karen Campo](https://github.com/KarenCampo)
