@@ -74,32 +74,18 @@ An optional precision is the for of a period (**.**) followed by an optional dei
 To print a date and time in the form 'Sunday, July 3, 10:02', where
      weekday and month are pointers to strings:
 ~~~
-           #include <stdio.h>
-           _printf(stdout, "%s, %s %d, %.2d:%.2d\n",
-                   weekday, month, day, hour, min);
+#include "holberton.h"
 
-     To print pi to five decimal places:
-
-           #include <math.h>
-           #include <stdio.h>
-           _printf(stdout, "pi = %.5f\n", 4 * atan(1.0));
-
-     To allocate a 128 byte string and print into it:
-
-           #include <stdio.h>
-           #include <stdlib.h>
-           #include <stdarg.h>
-           char *newfmt(const char *fmt, ...)
-           {
-                   char *p;
-                   va_list ap;
-                   if ((p = malloc(128)) == NULL)
-                           return (NULL);
-                   va_start(ap, fmt);
-                   (void) vsnprintf(p, 128, fmt, ap);
-                   va_end(ap);
-                   return (p);
-           }
+/**
+ * main - Entry point
+ *
+ * Return: Always 0
+ */
+int main(void)
+{
+    _printf("%S\n", "Holberton\nSchool");
+    return (0);
+}
 ~~~
 
 ## See also 
