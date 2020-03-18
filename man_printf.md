@@ -71,8 +71,7 @@ An optional precision is the for of a period (**.**) followed by an optional dei
 
 ## Example 
  
-To print a date and time in the form 'Sunday, July 3, 10:02', where
-     weekday and month are pointers to strings:
+
 ~~~
 #include "holberton.h"
 
