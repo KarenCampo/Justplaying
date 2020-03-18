@@ -1,4 +1,4 @@
-				0x11. C - printf - We write our own printf function.
+				II11. C - printf - We write our own printf function.
 
 # Resources
 
@@ -58,25 +58,9 @@ Printf allows to specify format to the output. Here some examples:
 
 * %d ó %i	     integer in base 10 with (int)sign
                      printf ("integer number in base 10 is: %d" , -10);
-
-* %u	             integer in base 10 without sign (int)
-
-* %o	             integer in base 8 without sign (int)
-
-* %x	             integer in base 16, lowercase letter (int)
-
-* %X	             integer in base 16, uppercase (int)
-
-* %f	             single precision decimal floating point (float)
-
-* %lf	             double preision decimal floating pointComa flotante decimal de precisión doble (double)
-
-* %ld	             integer of 32 bits (long)
-
-* %lu	             integer without a sign of 32 bits (unsigned long)
-
-* %e	             scientific notation (mantissa / exponent), lowercase (decimal precision simple or double)
-* %E	             sientific notation (mantissa / exponent), mayúsculas (decimal precision simple or double)
 * %c	             carácter (char)
 * %s	             string od characteres (string) 
+print_char
 
+## Diagrams 
+[check our diagrams here](https://app.diagrams.net/#G1ugIojgS2L6mXuic1mTNpsQZ2CAtv1wdO)
