@@ -8,16 +8,18 @@
 ## SYNOPSIS
 
 	#include <holberton.h>
-
+	
+	int (*get_format(chars))(va_list);
 	int _printf(const char *format, ...);
 	int print_char(va_list arg);
 	int print_string(va_list arg);
 	int print_int(va_list arg);
+	int print_decimal(va_list arg);
 
 
 ## DESCRIPTION
 
-	The function _printf() is a customized version of printf(), function that outputs according to a format. Under the control of a format string this funct	ion writes subsequent arguments (or arguments accessed via the variable-length argument facilities of stdarg(3)) are converted for output.
+	The function _printf() is a customized version of printf(), function that outputs according to a format. Under the control of a format string this function writes subsequent arguments (or arguments accessed via the variable-length argument facilities of stdarg(3)) are converted for output.
 
 ## RETURN VALUE
 
@@ -40,7 +42,7 @@ The character % is followed by zero or more of the following flags:
 
 The value has to become an alternate  form for **o** conversions. The first output of the string character is 0 - prefixing 0 if 0 wasn't there. For **x** and **X** conversions , a nonzero result has the string **0x** (or **0X** for **X** conversions). For a **a**, **A**, **e**, **E**, **f**, **F**, **g** and **G** conversions, a decimal point will always be contained in the result.  For **g** and **G** conversions, trailing zeros are not removed from the result as they would be otherwise.
 
-####  **'0'** (number zero)https://github.com/KarenCampo/Justplaying.git
+####  **'0'** (number zero)
 
 Its value should be padded for all covesions but n, the converted value should be padded on the left with zeros instead of blanks. If precision is given with a numeric onversion (**d**, **i**, **o**, **u**, **x**, and  **X**). The flag 0 is not taken into account. For other conversions the behavior is undefined. 
 
@@ -55,7 +57,7 @@ A space or blank should be left before a positive number or empty string done by
 
 Signs **+** or **-** should be always placed right before a number produced by a signed conversion. By default a signed is used only for negative numbers. **A** **+** nullifies a space if both are being used
 
-#### **' ' '**
+#### '
 
 For decimal conversions (**i**, **d**, **u**, **f**, **F**, **g**, **G**) the ouput is to be grouped with wons of grouping character if the local information indicates any. Take in count that there are many version of **gcc**(1) can't parse this option and will show a warning.
 
@@ -65,13 +67,13 @@ An optional string of decimal digits (with a first digit different than zero) th
 
 ## Presicion 
 
-An optional precision is the for of a period (**.**) followed by an optional deimal of string digits. Instead of a decimal string digit you can write **'*'** ir **'*m$'** - for some integer decimal m) to specify that the precision happens in the next argument or in the m-th argument and must be of the type *int*. If the precission is given only as **'.'** of if it is negative , then will be taken to be a zero. This way it gives the minimum number of digits that appear after the [radix character](https://en.wikipedia.org/wiki/Radix) for **a**, **A**, **e**, **E**, **f** and **F** conversion. 
+An optional precision is the for of a period (**.**) followed by an optional deimal of string digits. Instead of a decimal string digit you can write **'*'** or **'*m$'** - for some integer decimal m) to specify that the precision happens in the next argument or in the m-th argument and must be of the type *int*. If the precission is given only as **'.'** of if it is negative , then will be taken to be a zero. This way it gives the minimum number of digits that appear after the [radix character](https://en.wikipedia.org/wiki/Radix) for **a**, **A**, **e**, **E**, **f** and **F** conversion. 
 
 ## Example 
-~~~ 
-To print a date and time in the form ``Sunday, July 3, 10:02'', where
+ 
+To print a date and time in the form 'Sunday, July 3, 10:02', where
      weekday and month are pointers to strings:
-
+~~~
            #include <stdio.h>
            _printf(stdout, "%s, %s %d, %.2d:%.2d\n",
                    weekday, month, day, hour, min);
